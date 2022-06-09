@@ -8,8 +8,8 @@
  */
 declare enum PrinterTypes {
   EPSON = "epson",
-  TANCA = "tanca",
-  STAR = "star"
+  STAR = "star",
+  BIXOLON = "bixolon",
 }
 
 declare class ThermalPrinter {
@@ -307,6 +307,20 @@ declare class ThermalPrinter {
   ): void;
 
   /**
+   * Load images into NV memory
+   * @param String array of file paths
+   * @returns Promise<Buffer> command buffer
+  */
+  loadNVImages(imagePaths: string[]): Promise<Buffer>;
+
+  /**
+   * Send NV image print command to printer
+   * @param Number NV image number to print
+   * @param Number Printing density mode. 0 = Normal, 1 = Double-width
+  **/
+  printNVImage(num: Number, mode: Number) : Promise<Buffer>;
+
+  /**
    * Add image
    * @param String file path
    * @returns Promise<Buffer> image buffer
@@ -342,6 +356,6 @@ declare class ThermalPrinter {
 
 
 export {
-    ThermalPrinter as printer,
-    PrinterTypes as types
+  ThermalPrinter as printer,
+  PrinterTypes as types
 };

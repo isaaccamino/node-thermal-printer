@@ -1,7 +1,7 @@
 {
   "name": "node-thermal-printer",
   "version": "4.1.2",
-  "description": "Print on Epson, Tanca and Star thermal printers with NodeJS",
+  "description": "Print on Epson and Star thermal printers with NodeJS",
   "main": "node-thermal-printer.js",
   "repository": {
     "type": "git",
@@ -21,8 +21,12 @@
   },
   "homepage": "https://github.com/Klemen1337/node-thermal-printer",
   "dependencies": {
+    "bmp-js": "^0.1.0",
+    "canvas": "^2.9.1",
     "iconv-lite": "0.5.0",
+    "jsbarcode": "^3.11.5",
     "pngjs": "3.3.3",
+    "sharp": "^0.30.6",
     "unorm": "1.4.1",
     "write-file-queue": "0.0.1"
   },

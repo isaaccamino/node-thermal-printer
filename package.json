@@ -1,11 +1,11 @@
 {
-  "name": "node-thermal-printer",
-  "version": "4.1.2",
+  "name": "@blaykelarue/thermal-printer",
+  "version": "4.1.3",
   "description": "Print on Epson and Star thermal printers with NodeJS",
   "main": "node-thermal-printer.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Klemen1337/node-thermal-printer"
+    "url": "git+https://github.com/Klemen1337/node-thermal-printer.git"
   },
   "keywords": [
     "thermal printer",
@@ -15,6 +15,12 @@
     "star"
   ],
   "author": "Klemen Kastelic <klemen.kast@gmail.com> (http://kastelic.net/)",
+  "contributors" : [
+    {
+      "name" : "Blayke LaRue",
+      "email" : "blayke.larue@gmail.com"
+    }
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Klemen1337/node-thermal-printer/issues"
@@ -32,5 +38,13 @@
   },
   "devDependencies": {
     "@types/node": "^10.14.2"
+  },
+  "types": "./node-thermal-printer.d.ts",
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

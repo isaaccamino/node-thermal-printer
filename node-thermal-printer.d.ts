@@ -407,8 +407,10 @@ export {
   PrinterTypes as types,
   BreakLine as breakLine,
   CharacterSet as characterSet,
+  PrinterUtils as printerUtils,
   ThermalPrinter,
   PrinterTypes,
   BreakLine,
-  CharacterSet
+  CharacterSet,
+  PrinterUtils
 };

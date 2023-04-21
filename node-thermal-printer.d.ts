@@ -372,7 +372,7 @@ declare class ThermalPrinter {
    * @param String file path
    * @returns Promise<Buffer> image buffer
   */
-  printImage(image: string): Promise<Buffer>;
+  printImage(image: string, settings?: { width: number, height: number }): Promise<Buffer>;
 
   /**
    * Add image buffer

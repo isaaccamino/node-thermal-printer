@@ -1,6 +1,6 @@
 {
   "name": "@blaykelarue/thermal-printer",
-  "version": "4.2.1",
+  "version": "4.2.2",
   "description": "Print on Epson, Tanca, Bixolon and Star thermal printers with NodeJS",
   "main": "node-thermal-printer.js",
   "repository": {

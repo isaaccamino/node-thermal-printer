@@ -365,14 +365,20 @@ declare class ThermalPrinter {
    * @param Number NV image number to print
    * @param Number Printing density mode. 0 = Normal, 1 = Double-width
   **/
-  printNVImage(num: Number, mode: Number) : Promise<Buffer>;
+  printNVImage(num: Number, mode: Number): Promise<Buffer>;
 
   /**
    * Add image
-   * @param String file path
+   * @param {String} image - file path
+   * @param {Object} settings - optional settings
+   * @param {Number} settings.width - image width
+   * @param {Number} settings.height - image height
+   * @param {Number} settings.density - image density (BIXOLON printers only)
+   * @param {Boolean} settings.dotMatrix - image is dot matrix (BIXOLON printers only)
+   * @param {Boolean} settings.autoResize - auto resize image to fit width (BIXOLON printers only)
    * @returns Promise<Buffer> image buffer
   */
-  printImage(image: string, settings?: { width: number, height: number }): Promise<Buffer>;
+  printImage(image: string, settings?: { width?: number, height?: number, density?: number, dotMatrix?: boolean, autoResize?: boolean }): Promise<Buffer>;
 
   /**
    * Add image buffer
